@@ -34,3 +34,15 @@ def FindWordCount(list,string):
                 counter += 1
                 j += 1
     return counter
+
+def ScoreFinder(players,score,target):
+    playersLower =[]
+    for i in players:
+        playersLower.append(i.lower())
+    if target.lower() in playersLower:
+        index = playersLower.index(target)
+        PrintOutput('%s got a score of %d' %(players[index], score[index]))
+    else:
+        PrintOutput("player not found")
+
+ScoreFinder(['brendan','josh','Abby','calli'],[12,34,54,76],'abby')
