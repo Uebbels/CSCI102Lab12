@@ -22,3 +22,15 @@ def UpdateString(string,replacement,index):
     output = ''.join(output)
     return output
 
+def FindWordCount(list,string):
+    for i in list:
+        j=0
+        while j != -1:
+            j = i.find(string, j)
+            print('debug 1', i.find(string,j))
+            if j == -1:
+                continue
+            elif j != -1:
+                counter += 1
+                j += 1
+    return counter
