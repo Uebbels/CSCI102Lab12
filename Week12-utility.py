@@ -45,4 +45,12 @@ def ScoreFinder(players,score,target):
     else:
         PrintOutput("player not found")
 
-ScoreFinder(['brendan','josh','Abby','calli'],[12,34,54,76],'abby')
+def Union(list1,list2):
+    outlist = list1
+    for i in list2:
+        if i in outlist:
+            continue
+        else:
+            outlist.append(i)
+    return outlist
+
