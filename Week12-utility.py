@@ -3,3 +3,6 @@
 #CSCI 102 – Section C
 #Week 12 - Part B
 
+def PrintOutput(input):
+    output = 'OUTPUT ' + str(input)
+    print(output)
