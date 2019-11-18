@@ -7,9 +7,18 @@ def PrintOutput(input):
     output = 'OUTPUT ' + str(input)
     print(output)
 
-def loadfile(filename):
+def LoadFile(filename):
     with open(filename,'r') as file:
         contents = file.read()
         lines = contents.split('.')
     return lines
-print(loadfile('test.txt'))
+
+def UpdateString(string,replacement,index):
+    output = []
+    for i in range(len(string)):
+        if i == index:
+            output.append(replacement)
+        else:output.append(string[i])
+    output = ''.join(output)
+    return output
+
